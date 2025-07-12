@@ -1,6 +1,4 @@
 import Head from "next/head";
-import styles from "./page.module.css";
-import { Metadata } from "next";
 
 type studySpacesType = {
   name: string;
