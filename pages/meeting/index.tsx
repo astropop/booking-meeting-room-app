@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import Image from "next/image";
-import studySpacesArr from "./studySpacesType";
+import studySpacesArr from "./_components/studySpacesType";
 import styles from "./page.module.css";
 
 type imagenew = {
