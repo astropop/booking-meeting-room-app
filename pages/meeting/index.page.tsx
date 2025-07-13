@@ -23,7 +23,6 @@ function OptimizedImageWithFallback({
       width={512}
       height={911}
       style={{ width: "30%", height: "auto" }}
-      objectFit='cover'
       onError={() => setImageError(true)}
     ></Image>
   );
@@ -48,12 +47,12 @@ const BookableStudySpaces = () => {
                 <OptimizedImageWithFallback
                   alt={item.name}
                   fallback={"/No-Image.png"}
-                  src={item.image_front || ""}
+                  src={item.image_front ?? ""}
                 ></OptimizedImageWithFallback>
                 <OptimizedImageWithFallback
                   alt={item.name}
                   fallback={"/No-Image.png"}
-                  src={item.image_overview || ""}
+                  src={item.image_overview ?? ""}
                 ></OptimizedImageWithFallback>
               </td>
               <td style={{ width: "10%" }}>Note</td>
