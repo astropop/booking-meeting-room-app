@@ -8,5 +8,6 @@ module.exports = {
   images: {
     remotePatterns: [new URL('https://lh3.googleusercontent.com/**')],
   },
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js']
 }
 export default nextConfig;
