@@ -1,4 +1,4 @@
-type studySpacesType = {
+export type studySpacesType = {
   name: string;
   url: string;
   image_front?: string | null;
