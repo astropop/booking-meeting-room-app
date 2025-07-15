@@ -4,4 +4,5 @@ export interface StudySpace {
   url: string;
   image_front?: string | null;
   image_overview?: string | null;
+  note?: string | null;
 }
