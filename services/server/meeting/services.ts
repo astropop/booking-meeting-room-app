@@ -1,7 +1,7 @@
 import { StudySpace } from "./type";
 
 export default async function getData(): Promise<StudySpace[]> {
-  const request = await fetch("/api/meeting", {
+  const request = await fetch("/meeting/api/meeting", {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",

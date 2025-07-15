@@ -19,6 +19,7 @@ const nextConfig: NextConfig = {
     "api.jsx",
     "api.js",
   ],
+  basePath: "/meeting",
 };
 
 export default nextConfig;
