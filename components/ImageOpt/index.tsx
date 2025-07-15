@@ -7,7 +7,11 @@ export type Imagenew = {
   alt: string;
 };
 
-const ImageOpt = ({ src, alt, fallback = "/No-Image.png" }: Imagenew) => {
+const ImageOpt = ({
+  src,
+  alt,
+  fallback = "/meeting/No-Image.png",
+}: Imagenew) => {
   const [imageError, setImageError] = useState(false);
   return (
     <Image

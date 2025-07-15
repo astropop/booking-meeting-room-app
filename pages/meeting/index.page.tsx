@@ -56,12 +56,12 @@ export default function Meeting() {
                     <td style={{ width: "75%" }}>
                       <ImageOpt
                         alt={item.name}
-                        fallback={"/No-Image.png"}
+                        fallback={"/meeting/No-Image.png"}
                         src={item.image_front ?? ""}
                       ></ImageOpt>
                       <ImageOpt
                         alt={item.name}
-                        fallback={"/No-Image.png"}
+                        fallback={"/meeting/No-Image.png"}
                         src={item.image_overview ?? ""}
                       ></ImageOpt>
                     </td>
