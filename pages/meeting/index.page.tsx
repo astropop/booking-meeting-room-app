@@ -45,7 +45,11 @@ export default function Meeting() {
                   <tr>
                     <td style={{ width: "5%" }}>{item.name}</td>
                     <td style={{ width: "10%" }}>
-                      <a href={item.url} target='_blank'>
+                      <a
+                        href={item.url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
                         Click here
                       </a>
                     </td>
