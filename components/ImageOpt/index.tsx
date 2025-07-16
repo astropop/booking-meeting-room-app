@@ -5,12 +5,14 @@ export type Imagenew = {
   src: string;
   fallback: string;
   alt: string;
+  className?: string;
 };
 
 const ImageOpt = ({
   src,
   alt,
   fallback = "/meeting/No-Image.png",
+  className,
 }: Imagenew) => {
   const [imageError, setImageError] = useState(false);
   return (
@@ -19,7 +21,7 @@ const ImageOpt = ({
       alt={alt}
       width={512}
       height={911}
-      style={{ width: "30%", height: "auto" }}
+      className={className}
       onError={() => setImageError(true)}
     ></Image>
   );
