@@ -1,0 +1,27 @@
+/* ======== MODAL ========== */
+
+.modal {
+  position: fixed;
+  z-index: 5000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  touch-action: none;
+  overflow: hidden;
+}
+
+.modalMain {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.modal.displayBlock {
+  display: block;
+}
+
+.modal.displayNone {
+  display: none;
+}

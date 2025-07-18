@@ -8,16 +8,16 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [new URL("https://lh3.googleusercontent.com/**")],
   },
-  // index.page.tsx... or index.api.tsx..
+  // index.page.tsx... or index.tsx..route.ts
   pageExtensions: [
     "page.tsx",
     "page.ts",
     "page.jsx",
     "page.js",
-    "api.tsx",
-    "api.ts",
-    "api.jsx",
-    "api.js",
+    "tsx",
+    "ts",
+    "jsx",
+    "js",
   ],
   basePath: "/meeting",
 };
