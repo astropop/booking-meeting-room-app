@@ -34,6 +34,7 @@ const Img = ({ ...props }: ImgProps) => {
       alt={props.alt}
       ref={imgRef}
       referrerPolicy='no-referrer'
+      loading='lazy'
       {...props}
     />
   );
