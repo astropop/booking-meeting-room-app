@@ -55,4 +55,5 @@ jobs:
             docker pull taile0/booking-meeting-room-app:latest
             docker stop next-booking-meeting-room-app || true
             docker rm next-booking-meeting-room-app || true
+            docker images -a |  grep "taile0/booking-meeting-room-app" | awk '{print $3}' | xargs docker rmi
             docker run -d --name next-booking-meeting-room-app -p 127.0.0.1:3000:3000 taile0/booking-meeting-room-app:latest
