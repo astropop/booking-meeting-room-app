@@ -1,9 +1,7 @@
 "use client";
-import { ReactElement, use, useState } from "react";
+import { use } from "react";
 import styles from "./page.module.css";
-import ImageOpt from "@/src/components/ImageOpt";
 import { StudySpace } from "@/src/services/server/meeting/type";
-import ModalUI, { ModalProps } from "@/src/components/Modal";
 import ImageButton from "./_components/ImageButton";
 
 export default function MeetingUI({

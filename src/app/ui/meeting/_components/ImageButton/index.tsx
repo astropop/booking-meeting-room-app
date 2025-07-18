@@ -1,33 +1,41 @@
 "use client";
-import ImageOpt, { ImageNewType } from "@/src/components/ImageOpt";
-import ModalUI from "@/src/components/Modal";
+import ModalUI from "@/src/app/ui/components/Modal";
 import { useState } from "react";
 import styles from "./index.module.css";
-const ImageButton = (props: ImageNewType) => {
+import Img, { ImgProps } from "../../../components/Img";
+import React from "react";
+
+interface ImageBtnProps extends ImgProps {
+  onClickImgBtn?: React.MouseEventHandler<HTMLImageElement>;
+}
+
+// const ImageButton = React.forwardRef<HTMLImageElement, ImageBtnProps>(
+
+const ImageButton = ({ ...props }: ImageBtnProps) => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const toggleModal = () => {
     setShowModal(!showModal);
   };
+
   return (
     <>
-      <ImageOpt
+      <Img
         src={props.src}
         alt={props.alt}
         className={props.className}
         onClick={toggleModal}
-      ></ImageOpt>
-      <ModalUI open={showModal} onClose={toggleModal}>
-        <ImageOpt
-          src={props.src}
-          alt={props.alt}
-          className={styles.imageModal}
-          // fill={props.fill}
-          onClick={props.onClick}
-        ></ImageOpt>
-      </ModalUI>
-      {/* <button type='button' className='btn' onClick={toggleModal}>
-        Open
-      </button> */}
+        {...props}
+      ></Img>
+      {showModal && (
+        <ModalUI open={showModal} onClose={toggleModal}>
+          <Img
+            src={props.src}
+            alt={props.alt}
+            className={styles.imageModal}
+            onClick={props.onClickImgBtn}
+          ></Img>
+        </ModalUI>
+      )}
     </>
   );
 };
