@@ -21,6 +21,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./standalone
+      - name: List files  
+        run: ls -la # or use tree . for a tree like structure
 
   deploy:
     # Chờ "build" xong mới chạy "deploy"
@@ -41,6 +43,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
 
 
