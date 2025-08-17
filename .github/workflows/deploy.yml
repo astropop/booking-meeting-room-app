@@ -16,13 +16,13 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build App
-        run: npm run build -- --base=/booking-meeting-room-app/
+        run: npm run build
       - name: Archive artifact
         shell: sh
         run: |
           tar \
             --dereference --hard-dereference \
-            --directory "dist" \
+            --directory "standalone" \
             -cvf "$RUNNER_TEMP/artifact.tar" \
             --exclude=.git \
             --exclude=.github \
@@ -53,4 +53,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
