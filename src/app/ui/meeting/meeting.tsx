@@ -6,7 +6,6 @@ import ImageButton from "./_components/ImageButton";
 import React from "react";
 
 const MeetingList = React.memo(({ data }: { data: StudySpace[] }) => {
-  console.log("Load-4 - MeetingList Child");
   return (
     <ul className={styles.listRoom}>
       {data.map((item) => {
@@ -59,7 +58,6 @@ export default function MeetingUI({
 }: {
   spaces: Promise<StudySpace[]>;
 }) {
-  console.log("Load-3 - MeetingUI");
   const data = use(spaces);
 
   // const [items, setItems] = useState(data);

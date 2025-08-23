@@ -3,7 +3,7 @@ name: "Local-Build and deploy booking meeting room to server"
 on:
   push:
     branches:
-      - main
+      - feature/final
 
 jobs:
   deploy:
