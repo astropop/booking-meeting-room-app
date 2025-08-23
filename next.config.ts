@@ -3,7 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   // folder after build
-  output: "standalone",
+  reactStrictMode: false,
+  output: "export",
   // accept external image from setting url
   images: {
     remotePatterns: [new URL("https://lh3.googleusercontent.com/**")],

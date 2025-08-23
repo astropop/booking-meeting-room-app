@@ -11,6 +11,7 @@ export default async function getDataMeeting(): Promise<StudySpace[]> {
     },
     cache: "no-store",
   });
+  console.log("Load-1 - data-getDataMeeting");
   const data = await request.json();
   return data;
 }
