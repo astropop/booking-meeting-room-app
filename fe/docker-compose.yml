@@ -5,6 +5,9 @@ services:
     image: booking-meeting-room/my-nextapp:latest
     environment:
       - NODE_ENV=production
+      - VIRTUAL_HOST=test.vnpsc.com
+      - LETSENCRYPT_HOST=test.vnpsc.com
+      - LETSENCRYPT_EMAIL=spinatp@gmail.com  # email to encrypt
     ports:
       - "3000:3000"   # optional, để debug trực tiếp
     networks:

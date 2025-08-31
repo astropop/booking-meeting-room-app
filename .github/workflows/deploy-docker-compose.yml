@@ -38,9 +38,6 @@ jobs:
               cd booking-meeting-room-app
             fi
 
-            docker compose build
-            docker compose up -d
-
             cd fe
 
             docker compose build
