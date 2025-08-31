@@ -30,6 +30,9 @@ jobs:
               mkdir ${{ secrets.NEW_PATH_PROJECT_LOCAL }}
             fi
 
+            sudo mkdir -p ${{ secrets.NEW_PATH_PROJECT_LOCAL }}
+            sudo chown -R $USER:$USER ${{ secrets.NEW_PATH_PROJECT_LOCAL }}
+
             cd ${{ secrets.NEW_PATH_PROJECT_LOCAL }} 
 
             if [ -d .git ]; then
@@ -45,7 +48,7 @@ jobs:
             docker compose build
             docker compose up -d
 
-            cd \fe
+            cd fe
 
             docker compose build
             docker compose up -d
