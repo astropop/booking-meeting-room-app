@@ -1,0 +1,18 @@
+services:
+  my-nextapp:
+    build:
+      dockerfile: Dockerfile
+    image: booking-meeting-room/my-nextapp:latest
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "3000:3000"   # optional, để debug trực tiếp
+    networks:
+      shared:
+        aliases:
+          - my-nextapp
+    restart: always
+networks:
+  shared:
+    external: true
+    name: my_tailt_shared_net

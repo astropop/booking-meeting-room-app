@@ -1,5 +1,5 @@
 "use client";
-import { use, useCallback, useMemo, useState } from "react";
+import { use, useMemo, useState } from "react";
 import styles from "./page.module.css";
 import { StudySpace } from "@/src/services/server/meeting/type";
 import ImageButton from "./_components/ImageButton";

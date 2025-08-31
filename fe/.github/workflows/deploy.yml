@@ -3,7 +3,7 @@ name: "Local-Build and deploy booking meeting room to server"
 on:
   push:
     branches:
-      - feature/final
+      - feature/final-bk
 
 jobs:
   deploy:
@@ -45,7 +45,7 @@ jobs:
             "JINA=${{ secrets.JINA }}"
 
       - name: Deploy to server
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.HOST_LOCAL }} # Địa chỉ của server
           username: ${{ secrets.USERNAME_LOCAL }} # Username để login vào server
