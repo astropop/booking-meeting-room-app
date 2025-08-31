@@ -27,11 +27,9 @@ jobs:
           script: |
             set -e
             if [ ! -d ${{ secrets.NEW_PATH_PROJECT_LOCAL }} ]; then
-              mkdir ${{ secrets.NEW_PATH_PROJECT_LOCAL }}
+              sudo mkdir -p ${{ secrets.NEW_PATH_PROJECT_LOCAL }}
+              sudo chown -R $USER:$USER ${{ secrets.NEW_PATH_PROJECT_LOCAL }}
             fi
-
-            sudo mkdir -p ${{ secrets.NEW_PATH_PROJECT_LOCAL }}
-            sudo chown -R $USER:$USER ${{ secrets.NEW_PATH_PROJECT_LOCAL }}
 
             cd ${{ secrets.NEW_PATH_PROJECT_LOCAL }} 
 
