@@ -1,7 +1,17 @@
-node_modules
-.next
-Dockerfile
+# Git & logs
 .git
 .gitignore
+npm-debug.log
+yarn.lock
+pnpm-lock.yaml
+
+# Node/X build cache
+node_modules
+.next/cache
 dist/**
+
+# Editor/OS junk
+.DS_Store
+.vscode
+
 README.md
