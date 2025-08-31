@@ -30,13 +30,13 @@ jobs:
             cd ${{ secrets.NEW_PATH_PROJECT_LOCAL }} 
 
             if [ -d /booking-meeting-room-app ]; then
+              cd booking-meeting-room-app
               git fetch 
               git pull
             else
               git clone -b feature/final https://github.com/astropop/booking-meeting-room-app.git
+              cd booking-meeting-room-app
             fi
-
-            cd booking-meeting-room-app
 
             docker compose build
             docker compose up -d
