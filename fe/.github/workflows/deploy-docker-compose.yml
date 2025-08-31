@@ -39,6 +39,7 @@ jobs:
               git clone git@github.com:astropop/booking-meeting-room-app.git .
               git switch feature/final
             fi
+            cd booking-meeting-room-app
 
             docker compose build
             docker compose up -d
