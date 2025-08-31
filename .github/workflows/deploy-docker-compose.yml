@@ -30,11 +30,10 @@ jobs:
             cd ${{ secrets.NEW_PATH_PROJECT_LOCAL }} 
 
             if [ -d .git ]; then
-              git fetch --all
-              git pull origin feature/final
+              git fetch 
+              git pull
             else
-              git clone git@github.com:astropop/booking-meeting-room-app.git .
-              git switch feature/final
+              git clone -b feature/final https://github.com/astropop/booking-meeting-room-app.git
             fi
 
             cd booking-meeting-room-app
