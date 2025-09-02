@@ -6,7 +6,7 @@ services:
     environment:
       - NODE_ENV=production
       - VIRTUAL_HOST=tai.vnpsc.com,www.tai.vnpsc.com
-      - LETSENCRYPT_HOST=test.vnpsc.com,tai.vnpsc.com
+      - LETSENCRYPT_HOST=tai.vnpsc.com,www.tai.vnpsc.com
       - LETSENCRYPT_EMAIL=spinatp@gmail.com  # email to encrypt information
     ports:
       - "3000:3000"   # optional
