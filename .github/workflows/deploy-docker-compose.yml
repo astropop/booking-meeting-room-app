@@ -20,14 +20,14 @@ jobs:
       - name: SSH and deploy
         uses: appleboy/ssh-action@v1.2.2
         with:
-          host: ${{ secrets.NEW_HOST_LOCAL }} # Địa chỉ của server
-          username: ${{ secrets.NEW_USERNAME_LOCAL }} # Username để login vào server
-          key: ${{ secrets.NEW_SSH_KEY_PRIVATE_LOCAL }} # Private key để login vào server
+          host: ${{ secrets.ONLINE_HOST }} # Địa chỉ của server
+          username: ${{ secrets.ONLINE_USERNAME }} # Username để login vào server
+          key: ${{ secrets.ONLINE_SSH_PRIVATE_KEY }} # Private key để login vào server
 
           script: |
             set -e
 
-            cd ${{ secrets.NEW_PATH_PROJECT_LOCAL }} 
+            cd ${{ secrets.ONLINE_PATH_PROJECT }} 
 
             if [ -d booking-meeting-room-app ]; then
               cd booking-meeting-room-app
